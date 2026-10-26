@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SentryBERT Threat Radar Pro</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; width: 320px; margin: 0; padding: 16px; position: relative; }
+        .pro-badge { position: absolute; top: 16px; right: 16px; background-color: #2563eb; color: #ffffff; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; }
+        .header-container { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+        .app-logo { width: 24px; height: 24px; }
+        .app-title { font-size: 16px; font-weight: 700; margin: 0; }
+        .sandbox-dropzone { border: 2px dashed #d1c7bd; border-radius: 8px; background-color: #faf8f5; padding: 24px 16px; text-align: center; cursor: pointer; }
+        .dropzone-text { font-size: 13px; color: #64748b; margin: 0 0 4px 0; }
+        .dropzone-subtext { font-size: 11px; color: #94a3b8; margin: 0; }
+        #threat-drawer { display: none; border-radius: 6px; padding: 12px; margin-top: 14px; border: 1px solid #fca5a5; background-color: #fff5f5; }
+        #threat-details-text { font-size: 12px; margin-bottom: 10px; }
+        .btn-group { display: flex; gap: 8px; }
+        .btn { flex: 1; font-size: 11px; font-weight: 600; padding: 6px 10px; border-radius: 4px; border: none; cursor: pointer; }
+        .btn-mitigate { background-color: #dc2626; color: #ffffff; }
+        .btn-ignore { background-color: #e2e8f0; color: #475569; }
+        .footer-links { margin-top: 16px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; }
+        .link-action { color: #2563eb; text-decoration: none; font-weight: 600; }
+        .toggle-container { display: flex; align-items: center; gap: 6px; }
+        .disclaimer-text { font-size: 10px; color: #64748b; line-height: 1.4; margin-top: 14px; border-top: 1px solid #f1f5f9; padding-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="pro-badge">PRO</div>
+    <div class="header-container">
+        <img src="logo.png" class="app-logo" alt="Logo">
+        <h1 class="app-title">SentryBERT Radar</h1>
+    </div>
+    <div id="dropzone-target" class="sandbox-dropzone">
+        <p class="dropzone-text">Drag & drop asset file to run security scan</p>
+        <p class="dropzone-subtext">Supports text metrics and script profiles</p>
+    </div>
+    <div id="threat-drawer">
+        <div id="threat-details-text"></div>
+        <div class="btn-group">
+            <button id="btn-action-mitigate" class="btn btn-mitigate">Mitigate Threat</button>
+            <button id="btn-action-ignore" class="btn btn-ignore">Ignore Block</button>
+        </div>
+    </div>
+
+    <!-- Synchronized Strategic Production Disclaimer Notice -->
+    <p class="disclaimer-text">
+        <strong>Notice:</strong> Extension environment constraints limit on-device parameter size. Models can occasionally make mistakes. For our privacy policy or to download our more capable enterprise desktop versions, visit <a href="https://vidyutprodyogiki.com" target="_blank" class="link-action">vidyutprodyogiki.com</a>.
+    </p>
+
+    <div class="footer-links">
+        <a href="#" id="link-generate-audit" class="link-action">Generate system audit log</a>
+        <div class="toggle-container">
+            <span style="color: #64748b;">Shield</span>
+            <input type="checkbox" id="toggle-passive-shield" checked>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

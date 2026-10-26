@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "SentryBERT Threat Radar Pro",
+  "version": "1.0.3",
+  "description": "On-device security stream intelligence running local INT8 neural inference passes.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SentryBERT Radar"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "offscreen"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "optimized_model.onnx",
+        "sentrybert_quantized.onnx",
+        "vocab.json",
+        "lib/ort.wasm"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
